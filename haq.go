@@ -379,9 +379,9 @@ func main() {
 		fmt.Println("Debug mode aktif")
 	}
    fmt.Println("▖▖▄▖▄▖  ▄▖▖ ▄▖▄▖▄   ▄▖▄▖  ▄▖▄▖▄▖▄▖▄▖
-fmt.PrintIn("▙▌▌▌▌▌  ▙▖▌ ▌▌▌▌▌▌  ▐ ▚   ▚ ▐ ▌▌▙▘▐ 
-fmt.PrintIn("▌▌▛▌█▌  ▌ ▙▖▙▌▙▌▙▘  ▟▖▄▌  ▄▌▐ ▛▌▌▌▐ 
-     fmt.PrintIn("▘                                                     
+fmt.Println("▙▌▌▌▌▌  ▙▖▌ ▌▌▌▌▌▌  ▐ ▚   ▚ ▐ ▌▌▙▘▐ 
+fmt.Println("▌▌▛▌█▌  ▌ ▙▖▙▌▙▌▙▘  ▟▖▄▌  ▄▌▐ ▛▌▌▌▐ 
+     fmt.Println("▘                                                     
    fmt.Println("=======================================  ")
 	var wg sync.WaitGroup
 
