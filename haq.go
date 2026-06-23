@@ -310,14 +310,14 @@ func monitor(state *AttackState, wg *sync.WaitGroup) {
 				fmt.Printf("[DEBUG MONITOR] Menerima sinyal berhenti.\n")
 			}
 			requestsSent := state.requestCounter.Load()
-			fmt.Printf("[%s] Request terkirim: %d\n", time.Now().Format("15:04:05"), requestsSent)
+			fmt.Printf("[%s] Send request: %d\n", time.Now().Format("15:04:05"), requestsSent)
 			state.Finish()
 			return
 		case <-ticker.C:
 			currentTime := time.Now()
 			if currentTime.Sub(lastReportTime) >= time.Duration(reportIntervalSec)*time.Second {
 				requestsSent := state.requestCounter.Load()
-				fmt.Printf("[%s] Request terkirim: %d\n", time.Now().Format("15:04:05"), requestsSent)
+				fmt.Printf("[%s] Send request: %d\n", time.Now().Format("15:04:05"), requestsSent)
 				lastReportTime = currentTime
 			}
 		}
@@ -333,7 +333,7 @@ func getGoroutineID() uint64 {
 }
 
 func printUsage() {
-	fmt.Println("PENGGUNAAN: ./haq_flood <url> [safe] [debug]")
+	fmt.Println("Run: ./haq <url> [safe] [debug]")
 	fmt.Println("  <url>: Alamat target (http:// atau https://)")
 	fmt.Println("  [safe]: Opsional. Berhenti otomatis jika response code >= 500.")
 	fmt.Println("  [debug]: Opsional. Aktifkan mode debug untuk log detail.")
@@ -378,7 +378,7 @@ func main() {
 	if state.debugMode {
 		fmt.Println("Debug mode aktif")
 	}
-	fmt.Println("HAQ FLOOD IS STARTING")
+	fmt.Println("      HAQ FLOOD IS STARTING      ")
 
 	var wg sync.WaitGroup
 
