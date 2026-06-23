@@ -369,16 +369,16 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("[INFO] Menargetkan: %s\n", state.targetURL)
-	fmt.Printf("[INFO] Host: %s\n", state.host)
-	fmt.Printf("[INFO] Jumlah goroutine: %d\n", numThreads)
+	fmt.Printf("URL target: %s\n", state.targetURL)
+	fmt.Printf("Host: %s\n", state.host)
+	fmt.Printf("Goroutine: %d\n", numThreads)
 	if state.safeMode {
-		fmt.Println("[INFO] Mode aman (safe) diaktifkan.")
+		fmt.Println("Safe mode aktif")
 	}
 	if state.debugMode {
-		fmt.Println("[INFO] Mode debug diaktifkan.")
+		fmt.Println("Debug mode aktif")
 	}
-	fmt.Println("[INFO] ========== haq flood mulai ......")
+	fmt.Println("HAQ FLOOD IS STARTING")
 
 	var wg sync.WaitGroup
 
