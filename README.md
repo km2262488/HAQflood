@@ -1,7 +1,7 @@
    السلام عليكم ورحمة اللهوبركاته
 
-go build haq.go
+go build flood.go
 
-./haq https://target.com
+./flood https://target.com
 
-./haq https://target.com safe debug
+./flood https://target.com safe debug
