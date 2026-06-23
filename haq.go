@@ -19,7 +19,7 @@ import (
 
 // --- Konfigurasi ---
 const (
-	numThreads         = 200 // Jumlah goroutine worker
+	numThreads         = 100 // Jumlah goroutine worker
 	randomStringMin    = 3
 	randomStringMax    = 10
 	keepAliveMin       = 110
