@@ -411,8 +411,9 @@ func main() {
 	if state.debugMode {
 		fmt.Println("  Debug mode aktif")
 	}
-	fmt.Println("  GAS DITAMPOL GASS POOLL")
-  fmt.Println("  =======================")
+	fmt.Println("  HAQ FLOOD IS STARTING ")
+	fmt.Println("  GAS DITAMPOL....... GAS POLLL")
+  fmt.Println("  ========================================")
 	var wg sync.WaitGroup
 
 	wg.Add(1)
