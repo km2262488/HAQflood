@@ -333,8 +333,8 @@ func getGoroutineID() uint64 {
 }
 
 func printUsage() {
-	fmt.Println("PENGGUNAAN: ./haq_flood <url> [safe] [debug]")
-	fmt.Println("  <url>: Alamat target (http:// atau https://)")
+	fmt.Println("Run: ./haq <url> [safe] [debug]")
+	fmt.Println("  <url>: target (http:// atau https://)")
 	fmt.Println("  [safe]: Opsional. Berhenti otomatis jika response code >= 500.")
 	fmt.Println("  [debug]: Opsional. Aktifkan mode debug untuk log detail.")
 }
