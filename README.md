@@ -1,3 +1,3 @@
-go build hulk.go
+go build haq.go
 
 ./haq https://target.com
