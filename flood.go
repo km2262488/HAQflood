@@ -412,7 +412,7 @@ func main() {
 		fmt.Println("  Mode debug diaktifkan")
 	}
 	fmt.Println("  HAQ FLOOD IS START")
-  fmt.Println("  ===================
+  fmt.Println("  ===================")
 	var wg sync.WaitGroup
 
 	wg.Add(1)
