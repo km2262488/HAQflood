@@ -378,9 +378,10 @@ func main() {
 	if state.debugMode {
 		fmt.Println("Debug mode aktif")
 	}
-   fmt.Println("▖▖▄▖▄▖  ▄▖▖ ▄▖▄▖▄   ▄▖▄▖  ▄▖▄▖▄▖▄▖▄▖")
-   fmt.Println(" ▙▌▌▌▌▌  ▙▖▌ ▌▌▌▌▌▌ ▐ ▚   ▚  ▐ ▌▌▙▘▐    ")
-   fmt.Println(" ▌▌▛▌█▌  ▌ ▙▖▙▌▙▌▙▘ ▟▖▄▌ ▄ ▐ ▛▌▌▌▐ ")                       
+   fmt.Println(" ▖▖▄▖▄▖  ▄▖▖ ▄▖▄▖▄   ▄▖▄▖  ▄▖▄▖▄▖▄▖▄▖")
+   fmt.Println(" ▙▌▌▌▌▌  ▙▖▌ ▌▌▌▌▌▌ ▐  ▚    ▚  ▐ ▌▌▙▘▐    ")
+   fmt.Println(" ▌▌▛▌█▌  ▌ ▙▖▙▌▙▌▙▘ ▟▖▄▌   ▄▌▐ ▛▌▌▌▐ ")                       
+   fmt.Println("                ")
 	var wg sync.WaitGroup
 
 	wg.Add(1)
