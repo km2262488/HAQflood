@@ -366,7 +366,7 @@ func getGoroutineID() uint64 {
 }
 
 func printUsage() {
-	fmt.Println("PENGGUNAAN: ./haq_flood <url> [safe] [debug]")
+	fmt.Println("RUN: ./haq_flood <url> [safe] [debug]")
 	fmt.Println("  <url>: Alamat target (http:// atau https://)")
 	fmt.Println("  [safe]: Opsional. Berhenti otomatis jika response code >= 500.")
 	fmt.Println("  [debug]: Opsional. Aktifkan mode debug untuk log detail.")
@@ -406,13 +406,13 @@ func main() {
 	fmt.Printf("  Host: %s\n", state.host)
 	fmt.Printf("  Goroutine: %d\n", numThreads)
 	if state.safeMode {
-		fmt.Println("  Mode aman (safe) diaktifkan")
+		fmt.Println("  Safe mode aktif")
 	}
 	if state.debugMode {
-		fmt.Println("  Mode debug diaktifkan")
+		fmt.Println("  Debug mode aktif")
 	}
-	fmt.Println("  HAQ FLOOD IS START")
-  fmt.Println("  ===================")
+	fmt.Println("  GAS DITAMPOL GASS POOLL")
+  fmt.Println("  =======================")
 	var wg sync.WaitGroup
 
 	wg.Add(1)
